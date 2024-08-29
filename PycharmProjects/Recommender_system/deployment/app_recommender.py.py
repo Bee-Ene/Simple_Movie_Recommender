@@ -6,7 +6,7 @@ import os
 # Print current working directory
 print("Current Working Directory:", os.getcwd())
 
-file_path = 'C:/Users/Heckerbella/PycharmProjects/Recommender_system/deployment/movies_dict.pkl'
+file_path = 'pkl_file_path'
 
 # Load the data
 if os.path.exists(file_path):
@@ -16,7 +16,7 @@ else:
     movies_dict = {}  #handle missing error file more properly
 
 movies = pd.DataFrame(movies_dict)
-similarity = pickle.load(open('C:/Users/Heckerbella/PycharmProjects/Recommender_system/deployment/similarity.pkl', 'rb'))
+similarity = pickle.load(open('pkl_file_path', 'rb'))
 
 def recommender(movie):
     index = movies[movies['title'] == movie].index[0]
